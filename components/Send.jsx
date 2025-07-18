@@ -103,7 +103,6 @@ const Send = ({ balanceRef }) => {
                 transaction,
                 connection
             );
-            // await connection.confirmTransaction(signedTransaction, 'confirmed');
             await awaitSignatureConfirmation(
                 signedTransaction,
                 connection,

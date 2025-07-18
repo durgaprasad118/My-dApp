@@ -38,36 +38,18 @@ const WalletContextProvider = ({ children }) => {
                                 </p>
                             </div>
 
-                            {/* Wallet Connection - Compact */}
-                            <div className="bg-white/80 backdrop-blur rounded-xl shadow border border-white/20 p-4 flex flex-col items-center space-y-3">
-                                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center shadow">
-                                    <svg
-                                        className="w-6 h-6 text-white"
-                                        fill="currentColor"
-                                        viewBox="0 0 20 20"
-                                    >
-                                        <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"></path>
-                                    </svg>
-                                </div>
+                            <div className="bg-white/80 backdrop-blur h-60 rounded-xl shadow border border-white/20 p-4 flex flex-col items-center space-y-3">
                                 <h2 className="text-lg font-bold text-gray-900">
                                     Connect Wallet
                                 </h2>
-                                <div className="flex flex-col sm:flex-row gap-2 w-full max-w-xs">
-                                    <div className="flex-1">
-                                        <WalletMultiButton className="!w-full !bg-gradient-to-r !from-purple-600 !to-blue-600 !hover:from-purple-700 !hover:to-blue-700 !border-0 !rounded-lg !py-2 !px-4 !text-white !font-semibold !shadow !transition-all !duration-300 text-sm" />
-                                    </div>
-                                    <WalletDisconnectButton className="!bg-red-500 !hover:bg-red-600 !border-0 !rounded-lg !py-2 !px-4 !text-white !font-semibold !shadow !transition-all !duration-300 text-sm" />
-                                </div>
+                                <WalletMultiButton className="!w-full !z-40 !bg-gradient-to-r !from-purple-600 !to-blue-600 !hover:from-purple-700 !hover:to-blue-700 !border-0 !rounded-lg !py-2 !px-4 !text-white !font-semibold !shadow !transition-all !duration-300 text-sm" />
                             </div>
 
-                            {/* Balance Card - No Green Header */}
                             <div className="bg-white/80 backdrop-blur rounded-xl shadow border border-white/20 p-4 flex flex-col items-center justify-center">
                                 <ShowUserBal ref={balanceRef} />
                             </div>
 
-                            {/* Main Features - Single Row, Equal Height */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
-                                {/* Airdrop Card */}
                                 <div className="bg-white/90 backdrop-blur rounded-xl shadow border border-white/20 p-4 flex flex-col h-full min-h-[220px]">
                                     <div className="flex items-center space-x-2 mb-3">
                                         <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-red-500 rounded flex items-center justify-center shadow">
@@ -97,7 +79,6 @@ const WalletContextProvider = ({ children }) => {
                                     </div>
                                 </div>
 
-                                {/* Send SOL Card */}
                                 <div className="bg-white/90 backdrop-blur rounded-xl shadow border border-white/20 p-4 flex flex-col h-full min-h-[220px]">
                                     <div className="flex items-center space-x-2 mb-3">
                                         <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-indigo-500 rounded flex items-center justify-center shadow">
@@ -127,7 +108,6 @@ const WalletContextProvider = ({ children }) => {
                                     </div>
                                 </div>
 
-                                {/* Message Signing Card */}
                                 <div className="bg-white/90 backdrop-blur rounded-xl shadow border border-white/20 p-4 flex flex-col h-full min-h-[220px]">
                                     <div className="flex items-center space-x-2 mb-3">
                                         <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded flex items-center justify-center shadow">
