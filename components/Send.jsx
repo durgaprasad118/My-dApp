@@ -111,7 +111,7 @@ const Send = ({ balanceRef }) => {
             setLoading(false);
             setSuccess(true);
             setTo('');
-            setAmount(0);
+            setAmount('');
             if (balanceRef?.current?.refreshBalance) {
                 setTimeout(async () => {
                     await balanceRef.current.refreshBalance();
